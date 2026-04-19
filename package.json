@@ -1,0 +1,17 @@
+{
+  "name": "kahoot-clone",
+  "version": "1.0.0",
+  "description": "Real-time multiplayer trivia game (Kahoot clone)",
+  "private": true,
+  "scripts": {
+    "install:all":   "npm install --prefix server && npm install --prefix client",
+    "dev:server":    "npm run dev --prefix server",
+    "dev:client":    "npm run dev --prefix client",
+    "dev":           "npx concurrently -n server,client -c blue,magenta \"npm run dev:server\" \"npm run dev:client\"",
+    "build:client":  "npm run build --prefix client",
+    "start:server":  "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "nextQuizId": 3,
+  "nextQuestionId": 13,
+  "quizzes": [
+    {
+      "id": 1,
+      "name": "General Knowledge",
+      "creator_name": "Trivia Blitz",
+      "description": "A classic mix of trivia across science, history, art, and more!",
+      "is_public": true,
+      "created_at": "2026-04-19T10:44:20.357Z"
+    },
+    {
+      "id": 2,
+      "name": "Capital cities",
+      "creator_name": "Michelle",
+      "description": "",
+      "is_public": true,
+      "created_at": "2026-04-19T10:52:28.656Z"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "quiz_id": 1,
+      "question": "What is the capital of France?",
+      "option_a": "London",
+      "option_b": "Berlin",
+      "option_c": "Paris",
+      "option_d": "Madrid",
+      "correct_index": 2,
+      "time_limit": 10,
+      "explanation": "Paris has been the capital of France since 987 AD.",
+      "order_index": 0
+    },
+    {
+      "id": 2,
+      "quiz_id": 1,
+      "question": "Which planet is known as the Red Planet?",
+      "option_a": "Venus",
+      "option_b": "Mars",
+      "option_c": "Jupiter",
+      "option_d": "Saturn",
+      "correct_index": 1,
+      "time_limit": 10,
+      "explanation": "Mars appears red due to iron oxide on its surface.",
+      "order_index": 1
+    },
+    {
+      "id": 3,
+      "quiz_id": 1,
+      "question": "What is 2 to the power of 10?",
+      "option_a": "512",
+      "option_b": "1,024",
+      "option_c": "2,048",
+      "option_d": "256",
+      "correct_index": 1,
+      "time_limit": 15,
+      "explanation": "2¹⁰ = 1,024 — why 1 KB is roughly 1,000 bytes.",
+      "order_index": 2
+    },
+    {
+      "id": 4,
+      "quiz_id": 1,
+      "question": "Who painted the Mona Lisa?",
+      "option_a": "Michelangelo",
+      "option_b": "Van Gogh",
+      "option_c": "Picasso",
+      "option_d": "Leonardo da Vinci",
+      "correct_index": 3,
+      "time_limit": 10,
+      "explanation": "Leonardo da Vinci painted it between 1503 and 1519.",
+      "order_index": 3
+    },
+    {
+      "id": 5,
+      "quiz_id": 1,
+      "question": "What is the chemical symbol for gold?",
+      "option_a": "Go",
+      "option_b": "Gd",
+      "option_c": "Au",
+      "option_d": "Ag",
+      "correct_index": 2,
+      "time_limit": 10,
+      "explanation": "Au comes from the Latin 'Aurum', meaning gold.",
+      "order_index": 4
+    },
+    {
+      "id": 6,
+      "quiz_id": 1,
+      "question": "How many sides does a hexagon have?",
+      "option_a": "5",
+      "option_b": "6",
+      "option_c": "7",
+      "option_d": "8",
+      "correct_index": 1,
+      "time_limit": 10,
+      "explanation": "Hexa- is Greek for six.",
+      "order_index": 5
+    },
+    {
+      "id": 7,
+      "quiz_id": 1,
+      "question": "What year did World War II end?",
+      "option_a": "1943",
+      "option_b": "1944",
+      "option_c": "1945",
+      "option_d": "1946",
+      "correct_index": 2,
+      "time_limit": 15,
+      "explanation": "V-E Day in May, V-J Day in September 1945.",
+      "order_index": 6
+    },
+    {
+      "id": 8,
+      "quiz_id": 1,
+      "question": "Which element has atomic number 1?",
+      "option_a": "Helium",
+      "option_b": "Oxygen",
+      "option_c": "Carbon",
+      "option_d": "Hydrogen",
+      "correct_index": 3,
+      "time_limit": 10,
+      "explanation": "Hydrogen is the lightest and most abundant element.",
+      "order_index": 7
+    },
+    {
+      "id": 9,
+      "quiz_id": 1,
+      "question": "What is the largest ocean on Earth?",
+      "option_a": "Atlantic",
+      "option_b": "Indian",
+      "option_c": "Pacific",
+      "option_d": "Arctic",
+      "correct_index": 2,
+      "time_limit": 10,
+      "explanation": "The Pacific covers more than 30% of Earth's surface.",
+      "order_index": 8
+    },
+    {
+      "id": 10,
+      "quiz_id": 1,
+      "question": "What language were first iPhone apps in?",
+      "option_a": "Swift",
+      "option_b": "Java",
+      "option_c": "Objective-C",
+      "option_d": "C++",
+      "correct_index": 2,
+      "time_limit": 15,
+      "explanation": "Objective-C was the primary iOS language until Swift in 2014.",
+      "order_index": 9
+    },
+    {
+      "id": 11,
+      "quiz_id": 2,
+      "question": "what is the capital of Australia ",
+      "option_a": "Canberra",
+      "option_b": "Sydney",
+      "option_c": "Melbourne",
+      "option_d": "Bonnie Doon",
+      "correct_index": 0,
+      "time_limit": 10,
+      "explanation": "",
+      "order_index": 0
+    },
+    {
+      "id": 12,
+      "quiz_id": 2,
+      "question": "What is the capital of France",
+      "option_a": "Hobart",
+      "option_b": "Paris",
+      "option_c": "London",
+      "option_d": "Bagette",
+      "correct_index": 0,
+      "time_limit": 10,
+      "explanation": "",
+      "order_index": 1
+    }
+  ]
+}
