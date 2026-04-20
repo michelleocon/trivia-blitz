@@ -7,7 +7,7 @@ import Leaderboard from '../components/Leaderboard.jsx';
 import ProgressBar from '../components/ProgressBar.jsx';
 import Timer from '../components/Timer.jsx';
 
-const API = 'http://localhost:3001/api';
+const API = import.meta.env.DEV ? 'http://localhost:3001/api' : '/api';
 
 /**
  * HostGame — full host-side game flow.

@@ -4,6 +4,7 @@
 
 const express = require('express');
 const http = require('http');
+const path = require('path');
 const { Server } = require('socket.io');
 const cors = require('cors');
 const gameManager = require('./gameManager');
@@ -11,13 +12,14 @@ const quizRoutes = require('./routes/quizzes');
 
 const app = express();
 const httpServer = http.createServer(app);
-const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
+const isProd = process.env.NODE_ENV === 'production';
+const CLIENT_URL = process.env.CLIENT_URL || (isProd ? '' : 'http://localhost:5173');
 
 const io = new Server(httpServer, {
-  cors: { origin: CLIENT_URL, methods: ['GET', 'POST'] },
+  cors: isProd ? {} : { origin: CLIENT_URL, methods: ['GET', 'POST'] },
 });
 
-app.use(cors({ origin: CLIENT_URL }));
+if (!isProd) app.use(cors({ origin: CLIENT_URL }));
 app.use(express.json());
 
 // ── REST API ──────────────────────────────────────────────────────────────────
@@ -230,8 +232,17 @@ function getPlayerList(session) {
   return [...session.players.values()].map((p) => ({ id: p.id, nickname: p.nickname, score: p.score }));
 }
 
+// In production, serve the React build as static files
+if (isProd) {
+  const clientDist = path.join(__dirname, '../../client/dist');
+  app.use(express.static(clientDist));
+  // All non-API routes go to the React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientDist, 'index.html'));
+  });
+}
+
 const PORT = process.env.PORT || 3001;
 httpServer.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`   Client URL: ${CLIENT_URL}`);
+  console.log(`🚀 Server running on http://localhost:${PORT} (${isProd ? 'production' : 'development'})`);
 });

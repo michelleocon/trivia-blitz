@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const API = 'http://localhost:3001/api';
+const API = import.meta.env.DEV ? 'http://localhost:3001/api' : '/api';
 
 export default function QuizLibrary() {
   const navigate = useNavigate();
