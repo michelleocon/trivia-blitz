@@ -1,0 +1,8 @@
+{
+  "build": {
+    "cmd": "npm run build"
+  },
+  "deploy": {
+    "cmd": "node server/src/index.js"
+  }
+}
